@@ -40,3 +40,64 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = document.querySelectorAll("a")
+
+navItems.forEach(item => item.style.color = "green")
+
+navItems[0].textContent = siteContent["nav"]["nav-item-1"]
+navItems[1].textContent = siteContent["nav"]["nav-item-2"]
+navItems[2].textContent = siteContent["nav"]["nav-item-3"]
+navItems[3].textContent = siteContent["nav"]["nav-item-4"]
+navItems[4].textContent = siteContent["nav"]["nav-item-5"]
+navItems[5].textContent = siteContent["nav"]["nav-item-6"]
+
+let headerImg = document.getElementById("cta-img")
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let ctaText = document.querySelector("h1")
+ctaText.textContent = siteContent["cta"]["h1"]
+
+let button = document.querySelector("button") 
+button.textContent = siteContent["cta"]["button"]
+
+let midImg = document.getElementById('middle-img')
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+let head4 = document.querySelectorAll('h4')
+
+head4[0].textContent = siteContent['main-content']['features-h4']
+head4[1].textContent = siteContent['main-content']['about-h4']
+head4[2].textContent = siteContent['main-content']['services-h4']
+head4[3].textContent = siteContent['main-content']['product-h4']
+head4[4].textContent = siteContent['main-content']['vision-h4']
+head4[5].textContent = siteContent['contact']['contact-h4']
+
+let midContentP = document.querySelectorAll('p')
+
+midContentP[0].textContent = siteContent['main-content']['features-content']
+midContentP[1].textContent = siteContent['main-content']['about-content']
+midContentP[2].textContent = siteContent['main-content']['services-content']
+midContentP[3].textContent = siteContent['main-content']['product-content']
+midContentP[4].textContent = siteContent['main-content']['vision-content']
+midContentP[5].textContent = siteContent['contact']['address']
+midContentP[6].textContent = siteContent['contact']['phone']
+midContentP[7].textContent = siteContent['contact']['email']
+midContentP[8].textContent = siteContent['footer']['copyright']
+
+let blog = document.createElement('a')
+blog.textContent = "Blog"
+blog.style.color = 'green'
+
+let nav = document.querySelector('nav')
+
+let home = document.createElement('a')
+home.textContent = "Home"
+home.style.color = 'green'
+
+nav.prepend(home)
+
+nav.appendChild(blog)
+
+
+console.log(home)
