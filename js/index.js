@@ -43,6 +43,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navItems = document.querySelectorAll("a")
 
+navItems.forEach(item => item.style.color = "green")
+
 navItems[0].textContent = siteContent["nav"]["nav-item-1"]
 navItems[1].textContent = siteContent["nav"]["nav-item-2"]
 navItems[2].textContent = siteContent["nav"]["nav-item-3"]
@@ -83,5 +85,19 @@ midContentP[6].textContent = siteContent['contact']['phone']
 midContentP[7].textContent = siteContent['contact']['email']
 midContentP[8].textContent = siteContent['footer']['copyright']
 
+let blog = document.createElement('a')
+blog.textContent = "Blog"
+blog.style.color = 'green'
 
-console.log(midContentP)
+let nav = document.querySelector('nav')
+
+let home = document.createElement('a')
+home.textContent = "Home"
+home.style.color = 'green'
+
+nav.prepend(home)
+
+nav.appendChild(blog)
+
+
+console.log(home)
